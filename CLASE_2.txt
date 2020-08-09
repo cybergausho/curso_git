@@ -4,6 +4,37 @@ git add & git commit
 git commit -a m "asi salteamos el add"
 NO SIRVE SI EL ARCHIVO ES NUEVO
 ------------------------------
+github <- como un server en la nube
+
+los repositorios que tenemos en la nube
+en github son "repositorios remotos"
+son analogo a lo que existe en local
+reflejar lo mismo de local y remoto.
+
+en nuestro caso, queremos subir lo que tenemos a github. por lo que crear un nuevo reposityorio en la linea de comando 
+(remote add origin ...
+ git push -u origin ...) NO NOS SIRVE
+debemos hacer a la inversa- 
+- vamos con la segunda opcion - 
+agregar un repositorio existente...
+git remote (url)
+
+debemos indicar que trabajaremos con un servidor especifico
+git remote add {name} {url}.git
+git remote -v <- dsiplay {name} {url}
+-------
+ahora para subir
+git push {name} --all (todos los branch)
+
+git push {name} {branch} <- mas conveniente
+git push origin master 
+
+git push -u origin (-u trackea el branch master local con el brach master remoto)
+luego solamente == git push 
+la primera vez subo cambios locales
+y creo la estructura de carpeta de archivos en el server con la DATABASE de git-
+
+
 
 
 
