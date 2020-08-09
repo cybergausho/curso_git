@@ -34,6 +34,42 @@ luego solamente == git push
 la primera vez subo cambios locales
 y creo la estructura de carpeta de archivos en el server con la DATABASE de git-
 
+luego hacemos otras modificiaciones, 
+al hacer git commit -am "xx"
+dara ok, pero al ir al git status 
+se vera una diferencia de branch
+donde HEAD <- L0CAL y ORIGIN <- REMOTO
+por lo que haremos otro git push...
+
+NO ES NECESARIO QUE POR CADA COMMIT PUSHEEMOS 
+Cada x time hacemos commit del trabajo 
+y podemos hacerlo asi por toda la jornada hasta que a fin de hora, hacemos el push. 
+---------------------
+para clonar un repo 
+git clone {url}.git
+crea una carpeta con el nombre del alias remoto. 
+para modificar nombre git clone{url} {nombre}
+-------
+
+BRANCH
+segmentacion del repositorio en un lugar donde vas a desarrollar una funcionalidad
+(si no sale, volves a otro, listo)
+
+master suele reflejar a lo que esta en produccion >--< 
+entonces desde el ultimo commit (el head) genero un nuevo branch donde continuamos commiteando, si me arrepiendo podemos borrar el branch o si esta correcto, el head del master puede pasar al head del nuevo branch 
+-----------
+debemos controlar donde estamos parados que es donde continuaremos el repo 
+crear branch para desarrolar pr ej funcion1
+
+git branch {name}
+git branch f1
+pero para comenzar a desarrollar sobre f1
+git checkout {branch-name} 
+el branch corresponde a un espacio completamente igual, pero el espacio logico es distinto.
+
+ 
+
+
 
 
 
