@@ -66,8 +66,46 @@ git branch f1
 pero para comenzar a desarrollar sobre f1
 git checkout {branch-name} 
 el branch corresponde a un espacio completamente igual, pero el espacio logico es distinto.
+LUEGO DE REALIZAR LOS CAMBIOS
+tenemos tres alternativas
+pushear a f1 sin juntar con master
+o pushear directamente a master
+eliminar el branch f1
+tambien si queremos dejar en stand by lo que estamos haciendo ... volvemos a master y creamos nuevo branch... 
 
- 
+OJO!
+Cuando nos movemos al branch master, si tenemos aun abiertos los archivos que eran del nuevo branch, apareceran sin guardar y estaran eliminados, NO DEBEMOS GUARDAR LOS CAMBIOS AQUI YA QUE REPLICARIA EN EL BRANCH NUEVO Y EN EL MASTER- 
+para unir el branch nuevo con el master, utilizamos GIT MERGE
+el merge siempre se utiliza partiendo desde el branch que sera sobreescrito por lo que si desarrollamos la funcionalidad nueva en f1, debemos ir a master (checkout master) y luego hacer GIT MERGE {NAME-BRANCH}
+si sale bien la funcion, DEVUELVE Fast-forward.
+(incorporacion inmediata.
+sino, error ej recursive
+
+ahora, debemos subir cambios a master REMOTO
+git push  (no se sube nada)<- debido al commit por lo que, lo unico que sucedio es que el puntero de master, paso al puntero de f1.
+
+luego del merge, si al branch f1 no lo necesito, podemos borrarlo del repo local y del remoto. 
+----------------
+ARBOL BIFURCADO
+creamos 2 branch en el head 
+(ej estamos trabajando en dos funcionalidades f2 f3)
+
+hacemos dos commit en cada branch 
+al revisar el log 
+veremos la bifurcacion graficada con --graph
+ahora, para realizar el merge al master 
+nos posicionamos en master
+elegimos uno de los dos branch,
+git merge f2
+ahora debemos hacer el merge que devolvera recursive 
+porque para entrar a f3  debe volver atras, recorrerlo y unirlo. 
+ESTE GIT REQUIERE UN COMENTARIO
+git merge f3 -m "merge recursivo"
+-----
+no se realizara el push de f2 y f3
+--------------
+
+
 
 
 
