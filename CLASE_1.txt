@@ -1,0 +1,73 @@
+git init 
+inicia nuevo directorio (.git) / inicializa git
+------------------
+crear un archivo de textoplano.txt
+
+se divide en 
+working directory - nuestro directorio raiz local
+stage area - preparado para subir 
+repository - en la base de datos de git
+		funciona como objetos
+		pero en funcion a grafos
+		
+BDgit: commit
+	-confirma cambio 			(id,nom,time,header)
+	tree-  (version, rep carp/subcarp
+		x blob/ )
+	tag
+
+git add 
+-------------------
+sube lo que elijamos al stage area 
+
+la confirmaciones de los cambios 
+se van a componer de las cosas que esten en el stage area 
+
+si esta todo ok, damos un obj commit
+valida nombre y email
+debemos tener preconfigurado
+
+antes que naranja
+la configuracion del git se divide en 3 config
+sistema -solo el usuario
+global - global para todo el so
+local - solo para ese repo
+
+
+git config --local user.name "asdasd"
+git config --local user.email "lautaro@gmail.com"
+horacio.esteve@gmail.com <-- profe
+
+si hacen solo el commit abre el vim
+git commit -m "cree el primer archivo del proyecto" -------------------------
+
+-----------------------
+git log 
+muestra todos los commit que se hicieron
+
+----------
+git add ..
+git commit
+
+por cada modificacion 
+git log se va haciendo muy grande 
+g----------------------------------
+git log --oneline
+devuelve la informacion minima necesaria
+git log --oneline --graph
+para verlo en forma de grafo (arbol)
+------------------------------------
+para volver atras / para movernos entre ramas(branch) o por n de commits
+git checkout ncommit
+nos cambia de rama y volvemos ala version anterior 
+------------------
+git log --oneline --graph --all
+vemos las ramas que salen 
+con gitchekaout volvemos al anterior
+git chekout master (vamos a rama nueva)
+
+
+
+
+
+
